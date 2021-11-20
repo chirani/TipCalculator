@@ -24,8 +24,7 @@ function changing() {
   if (!isNaN(parseFloat(bill)) && !isNaN(parseInt(people, 10))) {
     console.log(parseFloat(bill));
     const tip_amount = (
-      (parseFloat(bill) * tip_percentage) /
-      100 /
+      (parseFloat(bill) * tip_percentage * 0.01) /
       parseInt(people)
     ).toFixed(2);
     console.log(tip_amount);
