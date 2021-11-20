@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tip Calculator</title>
+    <link rel="icon" href="./images/favicon.png" type="image/x-icon">
+
+   
+  </head>
+  <body>
+    <header>
+      <img src="images/logo.svg" alt="logo"/>
+    </header>
+    <div class="container">
+      <div class="side">
+        <div class="one">
+          <label for="bill" class="left-label">Bill</label>
+          <div class="input-container">
+          <div class="icon"><img src="images/icon-dollar.svg" alt="Kiwi standing on oval"></div>
+          <input onchange="changing()" id="bill-entry" name="bill" type="text"/>
+          </div></div>
+        <div class="one">
+   
+        <label for="percentage" class="left-label">Select Tip %</label>
+        <div class="radio-selection">
+        <label for="five"  class="radio-label">
+          <input id="five" value="5" name="five" type="radio" class="radios"/>
+          <div class="radio-label-text">5%</div>
+        </label>
+        <label for="ten" class="radio-label">
+            <input id="ten" value="10" name="five" type="radio" class="radios"/>
+            <div class="radio-label-text">10%</div>
+          </label>
+          <label for="fiveteen" class="radio-label"> 
+              <input id="fiveteen" value="15" name="five" type="radio" class="radios"/>
+              <div class="radio-label-text">15%</div>
+            </label>  
+            <label for="twenty-five" class="radio-label">
+                <input id="twenty-five" value="25" name="five" type="radio" class="radios"/>
+                <div class="radio-label-text">25%</div>
+                
+              </label>  <label for="fifty" class="radio-label">
+                  <input id="fifty"  value="50" name="five" type="radio" class="radios"/>
+                  <div class="radio-label-text">50%</div>
+                </label>
+              <input onchange="changing()" type="text" name="tip-input" class="radio-label" placeholder="CUSTOM" />
+              </div></div>
+                <div class="one">
+                    <label for="bill" class="left-label">Number of people</label>
+                    <div class="input-container">
+                        <div class="icon">
+                          <img src="images/icon-person.svg" alt="Kiwi standing on oval">
+                        </div>
+                        <input onchange="changing()" id="people" name="bill2" type="text"/>
+                    </div>
+                      
+                </div>
+      </div>
+      <div class="side">
+        <div class="right-container">
+          <div class="tip-amount">
+            <div class="left">
+              <h3>Tip Amount</h3>
+              <h5>/ person</h5>
+            </div>
+            <h1 id="tip-amount"class="Right">0.00</h1>
+          </div>
+          <div class="total">
+            <div class="left">
+              <h3>Subtotal</h3>
+              <h5>/ person</h5>
+            </div>
+            <h1 id="total-person" class="Right">0.00</h1>
+          </div>
+          <Button onclick="reset()" id="reset">Reset</Button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js" type="text/javascript"></script>
+    <body>
+</html>
